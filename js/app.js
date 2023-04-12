@@ -265,8 +265,6 @@ let hours = ['6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', 
 const storeTableBody = document.querySelector('tbody');
 const storeTableHead = document.querySelector('thead');
 
-let storeArray = []
-
 const tableElement = document.getElementById("Table");
 
 function Store(name, min, max, avg) {
@@ -276,7 +274,6 @@ function Store(name, min, max, avg) {
     this.avg = avg,
     this.cookiesPerHourArray = [],
     this.dailyTotal = 0,
-    storeArray.push(this)
   this.render = function () {
 
   }
@@ -292,7 +289,6 @@ function Store(name, min, max, avg) {
         this.dailyTotal += cookiesSoldPerHour;
       }
     },
-    
     this.tableRender = function(){
       this.calculateCookiesPerHour();
       let firstRow = document.createElement("tr");
@@ -313,7 +309,6 @@ function Store(name, min, max, avg) {
       firstRow.appendChild(total);
     }
   }
-
 function renderHours(){
   let tdElem = document.createElement('td');
   tableElement.appendChild(tdElem);
@@ -337,6 +332,8 @@ let Tokyo = new Store('Tokyo', 3, 24, 1.2);
 let Dubai = new Store('Dubai', 11, 38, 3.7);
 let Paris = new Store('Paris', 20, 38, 2.3);
 let Lima = new Store('Lima', 2, 16, 4.6);
+
+let storeArray = [Seattle, Tokyo, Dubai, Paris, Lima]
 
 renderHours();
 
