@@ -1,5 +1,30 @@
 'use strict'
 
+// let form = document.querySelector('form');
+
+// console.log(form);
+
+// let handleSubmit = function(event){
+//   event.preventDefault();
+//   let name = event.target.storeName.value;
+//   let min = parseInt(event.target.minPerHour.value);
+//   let max = parseInt(event.target.maxPerHour.value);
+//   let avg = parseInt(event.target.avgPerHour.value);
+//   let newStore = new Store(
+//     name, 
+//     min, 
+//     max, 
+//     avg,
+//     );
+
+//   console.log(newStore);
+//   newStore.tableRender();
+//   storeArray.push(newStore);
+//   storeTotal();
+// }
+
+// form.addEventListener('submit', handleSubmit);
+
 console.log('hiii')
 
 let hours = ['6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', 'Total']
