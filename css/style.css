@@ -5,6 +5,12 @@
   header {
     background-color: darkgray;
   }
+
+  img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   main {
     background-color: slategray;
