@@ -25,9 +25,34 @@
 
 // form.addEventListener('submit', handleSubmit);
 
-console.log('hiii')
+let form = document.querySelector('form');
 
-let hours = ['6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', 'Total']
+console.log(form);
+
+let handleSubmit = function(event){
+  event.preventDefault();
+  let name = event.target.storeName.value;
+  let min = parseInt(event.target.minPerHour.value);
+  let max = parseInt(event.target.maxPerHour.value);
+  let avg = parseInt(event.target.avgPerHour.value);
+  let newCity = new Citys(
+    name, 
+    min, 
+    max, 
+    avg,
+    );
+
+  console.log(newCity);
+  newCity.tableRender();
+  // allStores.push(newCity);
+  storeTotal();
+}
+
+form.addEventListener('submit', handleSubmit);
+
+console.log('Class 201!~')
+
+let hours = ['6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm',]
 
 const tableElement = document.getElementById("Table");
 
@@ -117,8 +142,6 @@ function storeTotal(){
     let hourly = 0;
     console.log(allStores.length)
     for (let j = 0; j < allStores.length; j++){
-      console.log(j)
-      console.log(allStores[j].cookiesSoldEachHour[i])
       hourly += allStores[j].cookiesSoldEachHour[i];
       totalOfTotals += allStores[j].cookiesSoldEachHour[i];
     }
@@ -132,8 +155,6 @@ function storeTotal(){
 }
 
 renderHours()
-
-
 
 
 
