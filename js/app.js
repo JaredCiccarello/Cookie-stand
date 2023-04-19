@@ -29,6 +29,7 @@ let form = document.querySelector('form');
 
 console.log(form);
 
+// New store should be submitted
 let handleSubmit = function(event){
   event.preventDefault();
   let name = event.target.storeName.value;
@@ -42,6 +43,7 @@ let handleSubmit = function(event){
     avg,
     );
 
+    // we want the tablerender to render our new store along with our total
   console.log(newCity);
   newCity.tableRender();
   // allStores.push(newCity);
